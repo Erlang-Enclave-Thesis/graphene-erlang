@@ -54,6 +54,8 @@ endif
 # The make targets for downloading and compiling the Erlang source code, and
 # installing the binaries.
 $(BIN_DIR)/erlexec: $(ERLANG_SRC)/configure
+	@# Patch so that we don't use timerfd
+	sed -i "s/define HAVE_SYS_TIMERFD_H 1/undef HAVE_SYS_TIMERFD_H/" $(ERLANG_SRC)/erts/configure
 	cd $(ERLANG_SRC) && ./configure --prefix=$(abspath $(INSTALL_DIR))
 	cd $(ERLANG_SRC) && $(MAKE)
 	cd $(ERLANG_SRC) && $(MAKE) install
