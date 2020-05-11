@@ -1,7 +1,10 @@
 # Graphene Erlang/OTP
 Copyright 2020 Ericsson AB
 
-The files contained in this repository is *not* open source.
+All Rights Reserved
+
+The files contained in this repository is *not* open source, as in that
+the source is licensed in a permissive license.
 
 This repo is used as a starting point in getting Erlang/OTP to run in
 Graphene SGX and for easier getting help from the Graphene developers in
