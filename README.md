@@ -7,6 +7,11 @@ This repo is used as a starting point in getting Erlang/OTP to run in
 Graphene SGX and for easier getting help from the Graphene developers in
 making Erlang run in Graphene SGX.
 
+## Prerequisites
+Ubuntu 18.04
+
+SGX driver installed (we use the DCAP version)
+
 ## Building
 Regular build:
 ```
