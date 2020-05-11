@@ -47,3 +47,27 @@ can be run (remember to add the parameters)
 SGX=1 ./pal_loader erlexec.manifest -noshell -s hello init -s init stop
 ```
 
+## Running without Graphene
+Since the actual build of Erlang is standard you can compile an `.erl` file
+using
+```
+./install/lib/erlang/erts-10.7/bin/erlc [FILE]
+```
+and then run it using
+```
+./install/lib/erlang/erts-10.7/bin/erl [OPTIONS]
+```
+or the same way as the manifest (hint: look at how the `erl` executable looks
+above)
+```
+ROOTDIR=/PATH/TO/FOLDER/install/lib/erlang \
+BINDIR=/PATH/TO/FOLDER/install/lib/erlang/erts-10.7/bin \
+EMU=beam \
+./install/lib/erlang/erts-10.7/bin/erlexec [OPTIONS]
+```
+
+The [OPTIONS] could for example be
+```
+-noshell -s hello init -s init stop
+```
+
