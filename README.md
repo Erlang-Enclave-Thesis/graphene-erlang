@@ -15,6 +15,8 @@ Ubuntu 18.04
 
 SGX driver installed (we use the DCAP version)
 
+Probably some prerequisites to make Erlang/OTP build.
+
 ## Building
 Regular build:
 ```
